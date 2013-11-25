@@ -22,7 +22,15 @@ class Deck
     @cards.shuffle!
   end
 
-  def cards
-    @cards
+  def deal_card
+    @cards.pop
+  end
+
+  def deal_cards(count=1)
+    cards = []
+    count.times do 
+      cards << deal_card
+    end
+    cards
   end
 end

@@ -1,6 +1,6 @@
 # War: Version 0.1
 
-Get a deck of cards
+√ Get a deck of cards
 Split the deck between two players
 
 ## Game play:
