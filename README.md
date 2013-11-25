@@ -8,8 +8,8 @@
 √ Player 1 shows their card
 √ Player 2 shows their card
 
-Player with the higher cards wins both cards
-The cards that are won go into winner's graveyard hand
+√ Player with the higher cards wins both cards
+√ The cards that are won go into winner's graveyard hand
 
-Repeat 'Game Play' until one player runs out of cards
-Player that didn't run out of cards wins
+√ Repeat 'Game Play' until one player runs out of cards
+√ Player that didn't run out of cards wins
