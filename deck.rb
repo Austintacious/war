@@ -11,7 +11,8 @@ class Deck
 
     SUITS.each do |suit|
       VALUES.each do |value|
-        cards.push(value + suit)
+        card = Card.new(value, suit)
+        cards.push(card)
       end
     end
 
