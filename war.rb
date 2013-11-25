@@ -8,19 +8,35 @@ class War
 
     @player1.hand += @deck.deal_cards(26)
     @player2.hand += @deck.deal_cards(26)
+
+    @game_over = false
   end
 
   def initiate_battle
     player1_card = @player1.play_card
     player2_card = @player2.play_card
 
-    puts player1_card
-    puts player2_card
-
-    if player2_card.value > player1_card.value
-      puts "Player 2 wins with a #{player2_card}"
+    if player1_card && player2_card
+      judge_war(player1_card, player2_card)
     else
-      puts "Player 1 wins with a #{player1_card}"
+      @game_over = true
     end
+  end
+
+  def judge_war(card1, card2)
+    puts card1
+    puts card2
+
+    if card2.value > card1.value
+      puts "Player 2 wins with a #{card2}"
+      @player2.graveyard << card1
+    else
+      puts "Player 1 wins with a #{card1}"
+      @player1.graveyard << card2
+    end
+  end
+
+  def game_over?
+    @game_over
   end
 end

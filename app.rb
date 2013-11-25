@@ -6,4 +6,7 @@ require_relative 'war'
 require 'pry'
 
 war = War.new
-war.initiate_battle
+
+until war.game_over?
+  war.initiate_battle
+end
